@@ -15,7 +15,7 @@
 int	ft_nemico_destra(t_programma *program)
 {
 	if (program->map[program->nemico.pos.y][program->nemico.pos.x +1] == 'P')
-		ft_free_exit(program, "\e[31m\e[1mGAME OVER\n");
+		ft_free_exit(program, "\e[31m\e[1mGAME OVER\033[0m\n");
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = '0';
 	program->nemico.pos.x += 1;
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = 'Y';
@@ -26,7 +26,7 @@ int	ft_nemico_destra(t_programma *program)
 int	ft_nemico_sotto(t_programma *program)
 {
 	if (program->map[program->nemico.pos.y +1][program->nemico.pos.x] == 'P')
-		ft_free_exit(program, "\e[31m\e[1mGAME OVER\n");
+		ft_free_exit(program, "\e[31m\e[1mGAME OVER\033[0m\n");
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = '0';
 	program->nemico.pos.y += 1;
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = 'Y';
@@ -37,7 +37,7 @@ int	ft_nemico_sotto(t_programma *program)
 int	ft_nemico_sinistra(t_programma *program)
 {
 	if (program->map[program->nemico.pos.y][program->nemico.pos.x -1] == 'P')
-		ft_free_exit(program, "\e[31m\e[1mGAME OVER\n");
+		ft_free_exit(program, "\e[31m\e[1mGAME OVER\033[0m\n");
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = '0';
 	program->nemico.pos.x -= 1;
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = 'Y';
@@ -48,7 +48,7 @@ int	ft_nemico_sinistra(t_programma *program)
 int	ft_nemico_su(t_programma *program)
 {
 	if (program->map[program->nemico.pos.y -1][program->nemico.pos.x] == 'P')
-		ft_free_exit(program, "\e[31m\e[1mGAME OVER\n");
+		ft_free_exit(program, "\e[31m\e[1mGAME OVER\033[0m\n");
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = '0';
 	program->nemico.pos.y -= 1;
 	program->map[program->nemico.pos.y][program->nemico.pos.x] = 'Y';

@@ -18,7 +18,7 @@ int	ft_movimento_sinista(t_programma *program)
 	program->sprite->pos.x -= 1;
 	program->map[program->sprite->pos.y][program->sprite->pos.x] = 'P';
 	program->game.count_steps++;
-	program->pach = "player11.xpm";
+	program->pach = "./xpm/player11.xpm";
 	return (0);
 }
 
@@ -28,7 +28,7 @@ int	ft_movimento_destra(t_programma *program)
 	program->sprite->pos.x += 1;
 	program->map[program->sprite->pos.y][program->sprite->pos.x] = 'P';
 	program->game.count_steps++;
-	program->pach = "player10.xpm";
+	program->pach = "./xpm/player10.xpm";
 	return (0);
 }
 
@@ -38,7 +38,7 @@ int	ft_movimento_giu(t_programma *program)
 	program->sprite->pos.y += 1;
 	program->map[program->sprite->pos.y][program->sprite->pos.x] = 'P';
 	program->game.count_steps++;
-	program->pach = "player5.xpm";
+	program->pach = "./xpm/player5.xpm";
 	return (0);
 }
 
@@ -48,7 +48,7 @@ int	ft_movimento_su(t_programma *program)
 	program->sprite->pos.y -= 1;
 	program->map[program->sprite->pos.y][program->sprite->pos.x] = 'P';
 	program->game.count_steps++;
-	program->pach = "player3.xpm";
+	program->pach = "./xpm/player3.xpm";
 	return (0);
 }
 

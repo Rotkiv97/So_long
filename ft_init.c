@@ -19,6 +19,6 @@ int	ft_init(t_programma *program)
 	program->sprite->pos.x = 0;
 	program->sprite->pos.y = 0;
 	program->enemy = 0;
-	program->pach = "player3.xpm";
+	program->pach = "./xpm/player3.xpm";
 	return (0);
 }

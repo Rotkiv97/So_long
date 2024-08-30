@@ -15,30 +15,25 @@
 int ft_arnimazione_nemico(t_programma *program)
 {
     void *tmp = NULL;
-
-    // Assicurati che program->nemico.pos.x sia inizializzato correttamente
     if (!program || program->nemico.pos.x < 0) {
         error("Posizione del nemico non inizializzata correttamente");
         return -1;
     }
 
-    // Inizializza le dimensioni dello sprite se non sono state già inizializzate
     program->sprite->size.x = 0;
     program->sprite->size.y = 0;
 
-    // Libera l'immagine precedente se esiste
     if (program->sprite->reference != NULL) {
         mlx_destroy_image(program->mlx, program->sprite->reference);
     }
 
-    // Carica la nuova immagine in base alla posizione del nemico
     if (program->nemico.pos.x % 2 == 0) {
         tmp = mlx_xpm_file_to_image(program->mlx,
-                "npc1.xpm", &program->sprite->size.x,
+                "./xpm/npc1.xpm", &program->sprite->size.x,
                 &program->sprite->size.y);
     } else {
         tmp = mlx_xpm_file_to_image(program->mlx,
-                "npc2.xpm", &program->sprite->size.x,
+                "./xpm/npc2.xpm", &program->sprite->size.x,
                 &program->sprite->size.y);
     }
 

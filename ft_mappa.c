@@ -64,13 +64,13 @@ int ft_carica_mappa(t_programma *program, int k, int j)
     }
     // Carica la nuova immagine in base al carattere
     if (program->map[k][j] == '1')
-        tmp = mlx_xpm_file_to_image(program->mlx,"muro(1).xpm", &program->sprite->pos.x,  &program->sprite->pos.y);
+        tmp = mlx_xpm_file_to_image(program->mlx,"./xpm/muro(1).xpm", &program->sprite->pos.x,  &program->sprite->pos.y);
     else if (program->map[k][j] == '0')
-        tmp = mlx_xpm_file_to_image(program->mlx, "pavimento.xpm", &program->sprite->pos.x, &program->sprite->pos.y);
+        tmp = mlx_xpm_file_to_image(program->mlx, "./xpm/pavimento.xpm", &program->sprite->pos.x, &program->sprite->pos.y);
     else if (program->map[k][j] == 'E')
-        tmp = mlx_xpm_file_to_image(program->mlx,"exit.xpm", &program->sprite->pos.x, &program->sprite->pos.y);
+        tmp = mlx_xpm_file_to_image(program->mlx,"./xpm/exit.xpm", &program->sprite->pos.x, &program->sprite->pos.y);
     else if (program->map[k][j] == 'C')
-        tmp = mlx_xpm_file_to_image(program->mlx,"coll.xpm", &program->sprite->pos.x,&program->sprite->pos.y);
+        tmp = mlx_xpm_file_to_image(program->mlx,"./xpm/coll.xpm", &program->sprite->pos.x,&program->sprite->pos.y);
     else if (program->map[k][j] == 'P')
         tmp = mlx_xpm_file_to_image(program->mlx,program->pach, &program->sprite->pos.x, &program->sprite->pos.y);
     else if (program->map[k][j] == 'Y' && program->enemy > 0){
