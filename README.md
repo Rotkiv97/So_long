@@ -7,6 +7,7 @@ This project makes us use an MLX library, which allows us to recreate a 2D game 
 MLX -> The MLX library (MiniLibX) is a lightweight graphics library in C, for creating windows, drawing shapes, handling input events (such as keyboard and mouse), and displaying images.
 
 ![img](./Docks/img/map.png)
+
 ![img](./Docks/img/mapText.png)
 
 ## Objective of the game
